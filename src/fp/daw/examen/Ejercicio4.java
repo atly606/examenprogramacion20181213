@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+import java.util.Random;
+
 public class Ejercicio4 {
 
 	/* 
@@ -17,7 +19,12 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-	public static ...
+	public static void main1(String[] args) {
+		int[] array= {9,2,2,3,2,5,7,7,7,4};
+		for (int i: array) {
+			System.out.println(i);
+		}
+	}
 	
 	/*
 	 * 1 punto
@@ -31,8 +38,22 @@ public class Ejercicio4 {
 	 */
 	
 	public static void main(String[] args) {
-		
+		int n =10;
+		int[] array= new int[n];Random r= new Random(100);
+		array[0]=0;
+		for(int i=0; i<100;i++) {
+			array[i]=r.nextInt(100)+1;
+			for (int j=0; j<i;j++) {
+				if(array[i]==array[j]) {
+					i--;
+					break;
+				}
+			}
+		}
 
+	
+           for(int i=0;i<100;i++) {
+        	   System.out.println(array[i]+"");
+           }
 	}
-
 }

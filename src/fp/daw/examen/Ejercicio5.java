@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+import java.util.Scanner;
+
 public class Ejercicio5 {
 
 	/* 
@@ -16,8 +18,26 @@ public class Ejercicio5 {
 	 */
 	
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=(int)(Math.random()*200);
+		int y=100;
+		System.out.println("Entre 100-200, escribir un numero que quiere");
+		while(x!=y) {
+			y=sc.nextInt();
+			if(y>x) {
+				System.out.println("Mayor");
+			}
+			else if(y<x) {
+				System.out.println("Menor");
+				
+			}
+		}
+            System.out.println("Bien! Numero correcto" + x);
+            sc.close();
+		}
+		
 		
 
 	}
 
-}
+
